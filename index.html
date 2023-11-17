@@ -156,7 +156,74 @@
 
                     </div>
 
-                    <div class="box_video"></div>
+                    <!--<div class="box_video"></div>-->
+
+
+                    <div class="area_player">
+                        <div class="up_container">
+                            <div class="player-wrapper">
+                                <video poster="imgs/img_video.png" class="player" width="520" height="520" preload="none" controls loop muted
+                                    playsinline>
+                                    <source src="video/anuncioVideo.mp4" type="video/mp4">
+                                    </source>
+                                </video>
+                                <script defer>
+
+                                    var player = document.querySelector('.player');
+                                    player.controls = false;
+                                    /*setTimeout(() => {
+                                      player.play();
+                                    }, 1000);*/
+                                    function playClick() {
+                                        player.play();
+                                        player.volume = 1;
+                                        player.muted = false;
+                                        player.currentTime = 0;
+                                        player.controls = false;
+
+                                        document.querySelector(".thumb_1").style.display = "none";
+                                        //document.querySelector(".hidden_controls").style.display = "none";
+
+                                    }
+
+                                    function pauseClick() {
+                                        player.pause();
+                                        document.querySelector(".thumb_2").style.display = "flex";
+                                    }
+
+                                    function returnVideo() {
+                                        player.play();
+                                        document.querySelector(".thumb_2").style.display = "none";
+                                    }
+
+                                </script>
+
+                                <div class="thumb_1" onclick="playClick()">
+                                  
+                                    <svg class="icon_video" width="66" height="66" viewBox="0 0 66 66" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="33" cy="33" r="32" stroke="white" stroke-width="2" />
+                                        <path d="M44 33L27.5 42.5263L27.5 23.4737L44 33Z" fill="white" />
+                                    </svg>
+
+                                </div>
+
+                                <div class="thumb_2" onclick="returnVideo()">
+
+                                    <svg class="icon_video" width="66" height="66" viewBox="0 0 66 66" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="33" cy="33" r="32" stroke="white" stroke-width="2" />
+                                        <path d="M44 33L27.5 42.5263L27.5 23.4737L44 33Z" fill="white" />
+                                    </svg>
+                                </div>
+
+                                <div class="hidden_controls"></div>
+
+                                <div class="glass" onclick="pauseClick()"></div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
@@ -779,7 +846,7 @@
                     </h2>
                 </div>
             </div>
-          
+
             <div class="area_beneficios">
 
                 <div class="card_beneficios">
@@ -794,7 +861,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card_beneficios">
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
@@ -867,7 +934,30 @@
 
 
 
+    <div class="container_orcamento">
+        <div class="container_orcamento_int">
+            <div class="area_orcamento">
+                <img src="imgs/whatsapp_icon.svg" alt="">
 
+                <div class="title_orcamento">
+                    <h2>
+                        Solicite um <b>orçamento personalizado</b> pelo WhatsApp agora
+                    </h2>
+                </div>
+                
+                <a href="#">
+                    <div class="btn_md">
+                        <h2>
+                            Clique aqui
+                        </h2>
+                        <img src="imgs/set.svg" alt="">
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
 
 
 
