@@ -172,7 +172,9 @@ nav {
 }
 
 .bg_home {
-    background: url(../imgs/bg_home.webp), #552eff 50% / cover no-repeat;
+    background: url(../imgs/bg_home.webp), #552eff 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     mix-blend-mode: lighten;
     background-position: center;
     width: 100%;
@@ -362,7 +364,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0px 0px 60px 0px;
+    padding: 0px 0px 0px 0px;
 
     .container_desenvolvimento_int {
         display: flex;
@@ -380,9 +382,11 @@ nav {
             .area_desenvolvimento_int {
                 @extend %card_desenvolvimento;
             }
+
             .area_perfil {
                 position: relative;
             }
+
             .perfil {
                 position: absolute;
                 top: -60px;
@@ -390,6 +394,7 @@ nav {
                 max-width: max-content;
                 width: 100%;
             }
+
             .area_text_desenvolvimento {
                 display: flex;
                 flex-direction: column;
@@ -440,4 +445,126 @@ nav {
 
         }
     }
+}
+
+
+.container_beneficios {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 60px 0px 60px 0px;
+
+    .box_beneficios_1 {
+        position: absolute;
+        border-radius: 500px;
+        background: radial-gradient(81.95% 74.73% at 56.59% 62.93%, #D8BEFC 0%, #F0E1FF 100%);
+        filter: blur(200px);
+        max-width: 500px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+    }
+
+    .box_beneficios_2 {
+        position: absolute;
+        border-radius: 500px;
+        background: radial-gradient(48.78% 61.36% at 50.08% 30.02%, #87D0E8 0%, #E7F5FD 100%);
+        filter: blur(200px);
+        max-width: 500px;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+    }
+
+    .container_beneficios_int {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        max-width: 1280px;
+
+        .area_texts_beneficios {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            max-width: 650px;
+            width: 100%;
+
+            .info_beneficios p {
+                color: #00B2E9;
+                font-family: $font-bold-700;
+                font-size: 20px;
+                line-height: 100%;
+                letter-spacing: 3.2px;
+                text-transform: uppercase;
+            }
+
+            .tittle_beneficios_principal h2 {
+                color: #283032;
+                font-family: $font-regular-400;
+                font-size: 48px;
+                line-height: 125%;
+
+                b {
+                    font-family: $font-bold-700;
+                }
+            }
+
+        }
+
+        .area_beneficios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            width: 100%;
+
+            .card_beneficios {
+                width: 100%;
+                max-width: 290px;
+                height: 150px;
+
+                .card_beneficios_int {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0px 20px;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .circle_beneficios {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 60px;
+                    background: #DBF4FD;
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .title_beneficios h2 {
+                    color: #283032;
+                    text-align: center;
+                    font-family: $font-bold-700;
+                    font-size: 16px;
+                    line-height: 160%;
+                }
+            }
+        }
+    }
+
+
 }
