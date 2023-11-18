@@ -51,8 +51,12 @@ body {
 $font-regular-400: 'Ubuntu-Regular';
 $font-medium-500: 'Ubuntu-Medium';
 $font-bold-700: 'Ubuntu-Bold';
-$font-title: 48px;
 $font-info: 16px;
+
+:root {
+    --font-title-1: 48px;
+    --font-title-2: 40px;
+}
 
 a {
     text-decoration: none;
@@ -324,7 +328,7 @@ nav {
     .title_home h2 {
         color: #FFF;
         font-family: $font-bold-700;
-        font-size: 44px;
+        font-size: var(--font-title-2);
         line-height: 130%;
         letter-spacing: -0.88px;
     }
@@ -373,7 +377,7 @@ nav {
                 color: #283032;
                 text-align: center;
                 font-family: $font-regular-400;
-                font-size: 40px;
+                font-size: var(--font-title-2);
                 line-height: 100%;
 
                 b {
@@ -639,7 +643,7 @@ nav {
             .tittle_beneficios_principal h2 {
                 color: #283032;
                 font-family: $font-regular-400;
-                font-size: $font-title;
+                font-size: var(--font-title-1);
                 line-height: 125%;
 
                 b {
@@ -727,7 +731,7 @@ nav {
                 color: #FFF;
                 text-align: center;
                 font-family: $font-regular-400;
-                font-size: 40px;
+                font-size: var(--font-title-2);
                 line-height: 125%;
 
                 b {
@@ -890,7 +894,7 @@ nav {
             .title_comecar h2 {
                 color: #293437;
                 font-family: $font-bold-700;
-                font-size: $font-title;
+                font-size: var(--font-title-1);
                 line-height: 125%;
             }
 
@@ -960,7 +964,7 @@ nav {
                     color: #293437;
                     text-align: center;
                     font-family: $font-bold-700;
-                    font-size: $font-title;
+                    font-size: var(--font-title-1);
                     line-height: 100%;
                 }
 
@@ -1059,7 +1063,7 @@ nav {
                 color: #0D181B;
                 text-align: center;
                 font-family: $font-bold-700;
-                font-size: $font-title;
+                font-size: var(--font-title-1);
                 line-height: 100%;
             }
 
@@ -1103,5 +1107,254 @@ nav {
     }
 }
 
+%col_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.container_footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+
+    .container_footer_int {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        max-width: 1280px;
+
+        .area_footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .col_sm_1 {
+                @extend %col_footer;
+                max-width: 280px;
+
+                img {
+                    max-width: max-content;
+                    width: 100%;
+                    height: auto;
+                }
+
+                .info_footer_logo p {
+                    color: #294A53;
+                    font-family: $font-regular-400;
+                    font-size: $font-info;
+                    line-height: 160%;
+                }
+            }
+
+            .col_sm_2 {
+                @extend %col_footer;
+                max-width: max-content;
+
+                .area_contato_footer {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .title_contato_footer h2 {
+                        color: #294A53;
+                        font-family: $font-bold-700;
+                        font-size: $font-info;
+                        line-height: 100%;
+                    }
+                }
+
+                .area_redes_footer {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    max-width: 120px;
+                    .circle_footer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100px;
+                        background-color: #97C4DD;
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+
+            }
+        }
+
+        .area_copy {
+            display: flex;
+            align-items: flex-start;
+            border-top: #9BC2CC 0.5px solid;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+    }
+}
 
 
+@media( max-width: 1024px ) {
+
+    :root {
+        --font-title-1: 36px;
+        --font-title-2: 32px;
+    }
+    
+
+    .menu_mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    @keyframes move {
+        0% {
+            right: -100%;
+
+        }
+
+        100% {
+            right: 0px;
+        }
+
+    }
+
+    .menu_open {
+        display: flex;
+    }
+
+    .close {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    #container_menu {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        background: radial-gradient(75% 75% at 50.21% 0%, #3ecdf9d9 0%, #00a7dbba 100%);
+        position: fixed;
+        top: 0px;
+        z-index: 99;
+        transition: all ease 400ms;
+    }
+
+    .container_menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container_menu_int {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .area_menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .area_close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 40px;
+    }
+
+    .area_close_int {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1220px;
+    }
+
+    .close {
+        cursor: pointer;
+        max-width: max-content;
+        width: 100%;
+    }
+
+    .area_menu nav {
+        width: 100%;
+    }
+
+    .area_menu nav ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .logo_desktop {
+        display: none;
+    }
+
+    .area_menu nav ul a {
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+
+    .area_md {
+        flex-direction: column;
+        padding: 0px 20px;
+        .area_texts_home {
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            .title_home h2 {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .container_pilares {
+        padding: 40px 0px 0px 0px;
+        .container_pilares_int {
+            .area_pilares {
+                gap: 40px;
+                .area_cards_pilares  {
+                    height: auto;
+                    position: initial;
+                    gap: 30px;
+                    .card_1 {
+                        position: initial;
+                        z-index:auto;
+                    }
+                    .card_2 {
+                        position: initial;
+                        z-index:auto;
+                    }
+                    .card_3 {
+                        position: initial;
+                        z-index:auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
