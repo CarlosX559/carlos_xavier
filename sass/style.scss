@@ -158,7 +158,6 @@ nav {
             .area_player {
                 width: 100%;
                 max-width: 500px;
-                box-shadow: 0px 4px 27px 0px rgba(59, 204, 248, 0.60);
             }
 
             .icon_video {
@@ -732,6 +731,114 @@ nav {
                 border: 2px solid #D9D9D9;
             }
 
+        }
+    }
+}
+
+.container_solucoes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 0px 60px 0px;
+
+    .container_solucoes_int {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        max-width: 1280px;
+
+        .area_infos_icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            max-width: 750px;
+
+            .infos_icons_solucoes {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                max-width: max-content;
+
+                img {
+                    filter: drop-shadow(0px 4px 20px rgba(48, 196, 242, 0.50));
+                }
+
+                .title_infos_icons h2 {
+                    color: #293437;
+                    font-family: $font-bold-700;
+                    font-size: 16px;
+                    line-height: 100%;
+                }
+            }
+        }
+
+        .area_solucoes {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1180px;
+
+            .card_solucoes {
+                border-radius: 16px;
+                background: #DBF6FF;
+                width: 100%;
+                max-width: 520px;
+                padding: 30px 30px 40px 30px;
+                position: relative;
+                z-index: 1;
+
+                .text_bg_solucoes {
+                    color: #CAEDF9;
+                    font-family: $font-bold-700;
+                    font-size: 190px;
+                    line-height: 100%;
+                    letter-spacing: -3.837px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    z-index: -1;
+                }
+
+                .card_solucoes_int {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .texts_info_solucoes p {
+                        color: #294A53;
+                        font-family: $font-regular-400;
+                        font-size: 18px;
+                        line-height: 160%;
+                        letter-spacing: 0.36px;
+
+                        b {
+                            font-family: $font-bold-700;
+                        }
+                    }
+                }
+            }
+
+            .bg_solucoes {
+                border-radius: 16px;
+                background: #F1EDFF;
+
+                .text_bg_solucoes_2 {
+                    color: #E7E0FD;
+                    font-family: $font-bold-700;
+                    font-size: 190px;
+                    line-height: 100%;
+                    letter-spacing: -3.837px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 20px;
+                    z-index: -1;
+                }
+            }
         }
     }
 }
