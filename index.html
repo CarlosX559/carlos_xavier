@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de Sites Profissionais - Carlos Xavier</title>
     <meta name="description"
-        content="Preparamos a sua empresa no digital. Entregamos um site interativo e moderno que gera resultados. Utilizamos tecnologias avançadas para alcançar excelente performance." />
+        content="Tenha Soluções em Web Personalizadas. Quer deixar o seu negócio e a sua marca diferenciados na Web?" />
     <meta name="keywords"
         content="Criação de sites profissionais, Landing pages profissionais, Web design responsivo, Desenvolvimento web personalizado, Site profissional, Hospedagem de sites em nuvem" />
     <link rel="stylesheet" href="css/style.css">
     <meta name="author" content="Carlos Xavier" />
-    <!--<meta property="article:author" content="https://www.carlosxavier.dev.br/" />-->
+    <meta property="article:author" content="https://www.carlosxavier.dev.br/" />
     <meta property="og:site_name" content="Especialista em Criação de Sites Profissionais - Carlos Xavier">
     <meta property="og:description"
-        content="Preparamos a sua empresa no digital. Entregamos um site interativo e moderno que gera resultados. Utilizamos tecnologias avançadas para alcançar excelente performance.">
-    <!--<meta property="og:url" content="https://www.carlosxavier.dev.br/">
-    <meta property="og:image" content="https://www.carlosxavier.dev.br/img/logo_azul_1.png">-->
+        content="Tenha Soluções em Web Personalizadas. Quer deixar o seu negócio e a sua marca diferenciados na Web?">
+    <meta property="og:url" content="https://www.carlosxavier.dev.br/">
+    <meta property="og:image" content="https://www.carlosxavier.dev.br/imgs/logo_carlos_xavier.png">
     <meta property="og:image:type" content="image/png">
     <link rel="shortcut icon" href="favicon/favicon-48x48.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -27,6 +27,44 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+
+      <!-- Google tag (gtag.js) -->
+   <!--<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10940154785"></script>
+   <script defer>
+       setTimeout(() => {
+           window.dataLayer = window.dataLayer || [];
+           function gtag() { dataLayer.push(arguments); }
+           gtag('js', new Date());
+
+           gtag('config', 'AW-10940154785');
+           let btn_whats = document.querySelectorAll('.btn_whats');
+
+           btn_whats.forEach((element) => {
+               element.addEventListener('click', () => {
+                   gtag('event', 'whatsapp');
+                   fbq('trackCustom', 'BtnWhatsapp');
+                   gtag_report_conversion();
+               });
+
+           });
+
+           function gtag_report_conversion(url) {
+               var callback = function () {
+                   if (typeof (url) != 'undefined') {
+                       window.location = url;
+                   }
+               };
+               gtag('event', 'conversion', {
+                   'send_to': 'AW-10940154785/uMDUCOjqvuEDEKGH1uAo',
+                   'event_callback': callback
+               });
+               return false;
+           }
+
+       }, 2000);
+
+   </script>-->
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -95,7 +133,7 @@
                             transform="rotate(-135 30.9604 31.8955)" fill="#ffffff" />
                     </svg>
 
-                    <a href="">
+                    <a href="index.html">
                         <img class="logo_desktop" src="imgs/logo_header.svg" alt="Carlos Xavier" width="119"
                             height="60">
                     </a>
@@ -111,9 +149,9 @@
                             <li>
                                 <a href="#servicos">Serviços</a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="#whatsapp">Whatsapp</a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="#portfolio">Portfólio</a>
                             </li>
@@ -125,6 +163,12 @@
         </div>
     </header>
 
+    <div class="area_whatsapp">
+        <a class="btn_whats" href="https://wa.me/5577981279219?text=Olá%20quero%20fazer%20um%20orçamento !"
+            target="_blank">
+            <img class="animation" src="imgs/whatsapp.svg" alt="" width="68" height="68">
+        </a>
+    </div>
 
     <section id="home">
         <div class="container_md bg_home">
@@ -145,12 +189,14 @@
                             </p>
                         </div>
 
-                        <a href="#">
+                        <a class="btn_whats"
+                            href="https://wa.me/5577981279219?text=Olá%20quero%20fazer%20um%20orçamento !"
+                            target="_blank">
                             <div class="btn_md">
                                 <h2>
                                     Clique aqui
                                 </h2>
-                                <img src="imgs/set.svg" alt="">
+                                <img src="imgs/set.svg" alt="" width="18" height="12">
                             </div>
                         </a>
 
@@ -162,7 +208,7 @@
                     <div class="area_player">
                         <div class="up_container">
                             <div class="player-wrapper">
-                                <video poster="imgs/img_video.png" class="player" width="520" height="520"
+                                <video poster="imgs/img_video.webp" class="player" width="520" height="520"
                                     preload="none" controls loop muted playsinline>
                                     <source src="video/anuncioVideo.mp4" type="video/mp4">
                                     </source>
@@ -230,11 +276,16 @@
                     </h2>
                 </div>
                 <div class="area_cards_pilares">
+
+                    <img class="js_icon_card" src="imgs/js_icon_card.svg" alt="" width="88" height="91">
+
+                    <img class="html_icon_card" src="imgs/html_icon_card.svg" alt="" width="90" height="93">
+
                     <div class="cards_pilares card_1">
                         <div class="cards_pilares_int">
                             <div class="separator_pilares"></div>
                             <div class="icon_pilares">
-                                <img src="imgs/icon_otimizacao.svg" alt="">
+                                <img src="imgs/icon_otimizacao.svg" alt="" width="22" height="20">
                             </div>
 
                             <div class="title_pilares">
@@ -257,7 +308,7 @@
                         <div class="cards_pilares_int">
                             <div class="separator_pilares"></div>
                             <div class="icon_pilares">
-                                <img src="imgs/icon_desempenho.svg" alt="">
+                                <img src="imgs/icon_desempenho.svg" alt="" width="26" height="22">
                             </div>
 
                             <div class="title_pilares">
@@ -278,7 +329,7 @@
                         <div class="cards_pilares_int">
                             <div class="separator_pilares"></div>
                             <div class="icon_pilares">
-                                <img src="imgs/icon_personalidade.svg" alt="">
+                                <img src="imgs/icon_personalidade.svg" alt="" width="21" height="25">
                             </div>
 
                             <div class="title_pilares">
@@ -302,8 +353,7 @@
 
                 </div>
 
-                <img class="bg_pilares" src="imgs/pilares.png" alt="">
-
+                <img class="bg_pilares" src="imgs/pilares.webp" alt="" width="410" height="807">
 
             </div>
         </div>
@@ -315,11 +365,11 @@
         <div class="container_desenvolvimento_int">
             <div class="area_desenvolvimento">
                 <div class="area_desenvolvimento_int">
-                    <div class="area_text_desenvolvimento">
+                    <div class="area_text_desenvolvimento" data-animation="left">
                         <div class="title_desenvovimento">
                             <h2>
                                 Ao desenvolver um site para o seu negócio, é essencial que ele reflita
-                                a personalidade da sua marca.
+                                a personalidade da sua marca
                             </h2>
                         </div>
                         <div class="sub_title_desenvolvimento">
@@ -748,7 +798,7 @@
                         </defs>
                     </svg>
 
-                    <div class="area_text_desenvolvimento">
+                    <div class="area_text_desenvolvimento" data-animation="right">
                         <div class="title_desenvovimento">
                             <h2>
                                 Otimização
@@ -773,7 +823,7 @@
 
             <div class="area_desenvolvimento bg_desempenho">
                 <div class="area_desenvolvimento_int">
-                    <div class="area_text_desenvolvimento">
+                    <div class="area_text_desenvolvimento" data-animation="left">
                         <div class="title_desenvovimento">
                             <h2>
                                 Desempenho
@@ -795,7 +845,7 @@
                     </div>
 
                     <div class="area_perfil">
-                        <img class="perfil" src="imgs/Carlos_xavier.png" alt="">
+                        <img class="perfil" src="imgs/carlos_xavier.webp" alt="" loading="lazy" width="289" height="459">
 
                         <svg width="536" height="389" viewBox="0 0 536 389" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -819,7 +869,7 @@
 
 
 
-    <div class="container_beneficios">
+    <div class="container_beneficios" id="vantagens">
         <div class="box_beneficios_1"></div>
         <div class="box_beneficios_2"></div>
         <div class="container_beneficios_int">
@@ -838,79 +888,79 @@
 
             <div class="area_beneficios">
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-1>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_gitHub.svg" alt="" loading="lazy" width="34" height="34">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                Desenvolvimento Web Personalizado para sua Empresa
+                                Desenvolvimento Web personalizado para sua empresa
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-2>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="" loading="lazy" width="29" height="26">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                Otimização e Desempenho de Sites
+                                Otimização e desempenho de sites
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-3>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_front_end.svg" alt="" loading="lazy" width="29" height="23">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                Desenvolvimento Front-End de Alta Qualidade
+                                Desenvolvimento Front-End de alta qualidade
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-1>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_responsivo.svg" alt="" loading="lazy" width="32" height="31">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                Sites Responsivos para uma Experiência Superior
+                                Sites responsivos para uma experiência superior
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-2>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_seo.svg" alt="" loading="lazy" width="36" height="36">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                SEO para Melhor Visibilidade Online
+                                SEO para melhor visibilidade online
                             </h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="card_beneficios">
+                <div class="card_beneficios" data-animation="down" data-delay-3>
                     <div class="card_beneficios_int">
                         <div class="circle_beneficios">
-                            <img src="imgs/icon_otimizacao_beneficios.svg" alt="">
+                            <img src="imgs/icon_nuvem.svg" alt="" loading="lazy" width="34" height="24">
                         </div>
                         <div class="title_beneficios">
                             <h2>
-                                Hospedagem em Nuvem Confiável
+                                Hospedagem em nuvem confiável
                             </h2>
                         </div>
                     </div>
@@ -926,7 +976,7 @@
     <div class="container_orcamento">
         <div class="container_orcamento_int">
             <div class="area_orcamento">
-                <img src="imgs/whatsapp_icon.svg" alt="">
+                <img src="imgs/whatsapp_icon.svg" alt="" width="58" height="58">
 
                 <div class="title_orcamento">
                     <h2>
@@ -934,12 +984,13 @@
                     </h2>
                 </div>
 
-                <a href="#">
+                <a class="btn_whats" href="https://wa.me/5577981279219?text=Olá%20quero%20fazer%20um%20orçamento !"
+                    target="_blank">
                     <div class="btn_md">
                         <h2>
                             Clique aqui
                         </h2>
-                        <img src="imgs/set.svg" alt="">
+                        <img src="imgs/set.svg" alt=""  width="18" height="12">
                     </div>
                 </a>
             </div>
@@ -952,7 +1003,7 @@
             <div class="area_infos_icons">
 
                 <div class="infos_icons_solucoes">
-                    <img src="imgs/icon_solucoes.svg" alt="">
+                    <img src="imgs/icon_solucoes.svg" alt="" width="28" height="28">
                     <div class="title_infos_icons">
                         <h2>
                             Soluções Web
@@ -961,7 +1012,7 @@
                 </div>
 
                 <div class="infos_icons_solucoes">
-                    <img src="imgs/icon_solucoes.svg" alt="">
+                    <img src="imgs/icon_solucoes.svg" alt="" width="28" height="28">
                     <div class="title_infos_icons">
                         <h2>
                             Sites profissionais
@@ -970,7 +1021,7 @@
                 </div>
 
                 <div class="infos_icons_solucoes">
-                    <img src="imgs/icon_solucoes.svg" alt="">
+                    <img src="imgs/icon_solucoes.svg" alt="" width="28" height="28">
                     <div class="title_infos_icons">
                         <h2>
                             Web Desenvolvedor
@@ -979,7 +1030,7 @@
                 </div>
 
                 <div class="infos_icons_solucoes">
-                    <img src="imgs/icon_solucoes.svg" alt="">
+                    <img src="imgs/icon_solucoes.svg" alt="" width="28" height="28">
                     <div class="title_infos_icons">
                         <h2>
                             Sites Otimizados
@@ -991,7 +1042,7 @@
             </div>
 
             <div class="area_solucoes">
-                <div class="card_solucoes">
+                <div class="card_solucoes" data-animation="left">
                     <div class="card_solucoes_int">
                         <div class="texts_info_solucoes">
                             <p>
@@ -1011,7 +1062,7 @@
                         01
                     </div>
                 </div>
-                <div class="card_solucoes bg_solucoes">
+                <div class="card_solucoes bg_solucoes" data-animation="right">
                     <div class="card_solucoes_int">
                         <div class="texts_info_solucoes">
                             <p>
@@ -1035,8 +1086,6 @@
         </div>
     </div>
 
-
-
     <div class="container_comecar">
         <div class="container_comecar_int">
             <div class="area_comecar">
@@ -1051,12 +1100,13 @@
                     </p>
                 </div>
 
-                <a href="#">
+                <a class="btn_whats" href="https://wa.me/5577981279219?text=Olá%20quero%20fazer%20um%20orçamento !"
+                    target="_blank">
                     <div class="btn_md">
                         <h2>
                             Clique aqui
                         </h2>
-                        <img src="imgs/set.svg" alt="">
+                        <img src="imgs/set.svg" alt=""  width="18" height="12">
                     </div>
                 </a>
 
@@ -1064,7 +1114,7 @@
         </div>
     </div>
 
-    <div class="container_experiencia">
+    <div class="container_experiencia" id="servicos">
         <div class="container_experiencia_int">
             <div class="area_experiencia">
                 <div class="area_texts_experiencia">
@@ -1089,9 +1139,9 @@
                 <div class="area_visao">
                     <div class="card_visao">
                         <div class="card_visao_int">
-                            <img src="imgs/front-end.png" alt="" width="463" height="187" loading="lazy">
+                            <img src="imgs/front-end.webp" alt="" width="463" height="187" loading="lazy">
 
-                            <div class="area_texts_visao">
+                            <div class="area_texts_visao" data-animation="right">
                                 <div class="title_visao">
                                     <h2>
                                         Desenvolvedor Front-end
@@ -1112,7 +1162,7 @@
 
                     <div class="card_visao">
                         <div class="card_visao_int site_responsivo">
-                            <div class="area_texts_visao">
+                            <div class="area_texts_visao" data-animation="left">
                                 <div class="title_visao">
                                     <h2>
                                         Site responsivo
@@ -1126,15 +1176,15 @@
                                     </p>
                                 </div>
                             </div>
-                            <img src="imgs/responsivo.png" alt="" width="463" height="187" loading="lazy">
+                            <img src="imgs/responsivo.webp" alt="" width="463" height="187" loading="lazy">
                         </div>
                     </div>
 
                     <div class="card_visao">
                         <div class="card_visao_int">
-                            <img src="imgs/performance.png" alt="" width="463" height="187" loading="lazy">
+                            <img src="imgs/performance.webp" alt="" width="463" height="187" loading="lazy">
 
-                            <div class="area_texts_visao">
+                            <div class="area_texts_visao" data-animation="right">
                                 <div class="title_visao">
                                     <h2>
                                         Performance
@@ -1152,7 +1202,7 @@
 
                     <div class="card_visao">
                         <div class="card_visao_int seo">
-                            <div class="area_texts_visao">
+                            <div class="area_texts_visao" data-animation="left">
                                 <div class="title_visao">
                                     <h2>
                                         SEO
@@ -1168,15 +1218,15 @@
                                 </div>
                             </div>
 
-                            <img src="imgs/seo.png" alt="" width="463" height="187" loading="lazy">
+                            <img src="imgs/seo.webp" alt="" width="463" height="187" loading="lazy">
                         </div>
                     </div>
 
                     <div class="card_visao">
                         <div class="card_visao_int">
-                            <img src="imgs/nuvem.png" alt="" width="463" height="187" loading="lazy">
+                            <img src="imgs/nuvem.webp" alt="" width="463" height="187" loading="lazy">
 
-                            <div class="area_texts_visao">
+                            <div class="area_texts_visao" data-animation="right">
                                 <div class="title_visao">
                                     <h2>
                                         Hospedagem em cloud
@@ -1201,20 +1251,21 @@
     <div class="container_orcamento">
         <div class="container_orcamento_int">
             <div class="area_orcamento">
-                <img src="imgs/whatsapp_icon.svg" alt="">
+                <img src="imgs/whatsapp_icon.svg" alt="" width="58" height="58">
 
                 <div class="title_orcamento">
                     <h2>
-                        Obtenha um orçamento gratuito - nos contate no WhatsApp.
+                        Obtenha um orçamento gratuito - nos contate no WhatsApp
                     </h2>
                 </div>
 
-                <a href="#">
+                <a class="btn_whats" href="https://wa.me/5577981279219?text=Olá%20quero%20fazer%20um%20orçamento !"
+                    target="_blank">
                     <div class="btn_md">
                         <h2>
                             Clique aqui
                         </h2>
-                        <img src="imgs/set.svg" alt="">
+                        <img src="imgs/set.svg" alt=""  width="18" height="12">
                     </div>
                 </a>
             </div>
@@ -1222,7 +1273,7 @@
     </div>
 
 
-    <div class="container_portfolio">
+    <div class="container_portfolio" id="portfolio">
         <div class="container_portfolio_int">
 
             <div class="area_portfolio">
@@ -1312,7 +1363,10 @@
             <div class="container_footer_int">
                 <div class="area_footer">
                     <div class="col_sm_1">
-                        <img src="imgs/logo_footer.svg" alt="">
+                        <a href="index.html">
+                            <img src="imgs/logo_footer.svg" alt="" width="135" height="69" loading="lazy">
+                        </a>
+
                         <div class="info_footer_logo">
                             <p>
                                 Especialista em Criação de Sites Profissionais e Desenvolvimento Web
@@ -1357,14 +1411,14 @@
                         </div>
 
                         <div class="area_redes_footer">
-                            <a href="#">
+                            <a href="https://www.instagram.com/carlosxavier_dev/" target="_blank">
                                 <div class="circle_footer">
-                                    <img src="imgs/instagram.svg" alt="">
+                                    <img src="imgs/instagram.svg" alt="Perfil instagram" width="20" height="20" loading="lazy">
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="https://github.com/CarlosX559" target="_blank">
                                 <div class="circle_footer">
-                                    <img src="imgs/facebook.svg" alt="">
+                                    <img src="imgs/github.svg" alt="Perfil GitHub" width="20" height="20" loading="lazy">
                                 </div>
                             </a>
                         </div>
@@ -1380,7 +1434,7 @@
                         </p>
                     </div>
                 </div>
-            
+
 
 
             </div>

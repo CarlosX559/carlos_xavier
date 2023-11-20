@@ -67,7 +67,90 @@ a {
 header {
     width: 100%;
     position: relative;
+    z-index: 3;
+}
+
+.animation {
+    animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale();
+    }
+
+    70% {
+        transform: scale();
+        box-shadow: 0 0 0 50px rgba(69, 152, 27, 0);
+    }
+
+    100% {
+        transform: scale();
+        box-shadow: 0 0 0 0 rgba(69, 152, 27, 0);
+    }
+}
+
+.area_whatsapp {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     z-index: 2;
+}
+
+.area_whatsapp a {
+    height: 68px;
+}
+
+.area_whatsapp img {
+    width: 100%;
+    max-width: 68px;
+    height: 68px;
+    transition: background, padding 400ms ease-in-out;
+    box-shadow: 0 0 0 0 #03BF65;
+    border-radius: 200px;
+}
+
+.area_whatsapp img:hover {
+    animation: pulsar;
+}
+
+[data-animation] {
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+
+[data-delay-1] {
+    transition-delay: 200ms;
+}
+
+[data-delay-2] {
+    transition-delay: 300ms;
+}
+
+[data-delay-3] {
+    transition-delay: 400ms;
+}
+
+[data-delay-4] {
+    transition-delay: 500ms;
+}
+
+[data-animation="down"] {
+    transform: translate3d(0, 20px, 0);
+}
+
+[data-animation="left"] {
+    transform: translate3d(-20px, 0, 0);
+}
+
+[data-animation="right"] {
+    transform: translate3d(20px, 0, 0);
+}
+
+[data-animation].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }
 
 .menu_open {
@@ -289,6 +372,11 @@ nav {
     border-radius: 12px;
     padding: 20px 25px;
     max-width: max-content;
+    transition: all ease-in-out 100ms;
+
+    &:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
 
     h2 {
         color: #FFF;
@@ -309,7 +397,6 @@ nav {
     background-position: center;
     width: 100%;
     height: auto;
-    padding: 40px 0px;
 }
 
 
@@ -317,6 +404,7 @@ nav {
     height: 100%;
     width: 100%;
     background: #4923ec33;
+    padding: 40px 0px;
 }
 
 .area_texts_home {
@@ -349,9 +437,41 @@ nav {
         @extend %btn_padrao;
         background: radial-gradient(75% 75% at 50.21% 0%, #3ECDF9 0%, #00A7DB 100%);
         box-shadow: 0px 4px 27px 0px rgba(59, 204, 248, 0.60);
+        img {
+            max-width: max-content;
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
+
+@keyframes cards {
+
+    from {
+        translate: 0 10vw;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+
+}
+
+
+%card_icon {
+    position: absolute;
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    animation: cards 1ms ease-in;
+    animation-timeline: view();
+    transform: scale3d(1, 1, 1);
+    transition: all ease 100ms;
+}
 
 .container_pilares {
     display: flex;
@@ -371,7 +491,7 @@ nav {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 80px;
+            gap: 60px;
             width: 100%;
 
             .title_pilare_principal h2 {
@@ -389,6 +509,7 @@ nav {
             .bg_pilares {
                 max-width: max-content;
                 width: 100%;
+                height: auto;
                 position: relative;
                 z-index: 0;
             }
@@ -401,15 +522,40 @@ nav {
                 flex-direction: column;
                 gap: 40px;
                 align-items: center;
-                height: calc(100% - 520px);
+                height: 678px;
+
+                .js_icon_card {
+                    @extend %card_icon;
+                    right: -50px;
+                    top: 20%;
+                    animation-range: cover 0% cover 50%;
+
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                }
+
+                .html_icon_card {
+                    @extend %card_icon;
+                    left: -100px;
+                    bottom: 0px;
+                    animation-range: cover 0% cover 30%;
+
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                }
 
                 .cards_pilares {
                     border-radius: 16.732px;
                     border: 0.837px solid #9BC2CC;
                     background: #FFF;
                     padding: 20px 25px 20px 30px;
-                    max-width: 220px;
+                    max-width: 260px;
                     height: auto;
+                    animation: cards 1ms ease-in;
+                    animation-timeline: view();
+                    animation-range: cover 0% cover 30%;
 
                     .cards_pilares_int {
                         display: flex;
@@ -435,6 +581,12 @@ nav {
                             width: 50px;
                             height: 50px;
                             border-radius: 100px;
+                            transform: scale3d(1, 1, 1);
+                            transition: all ease 100ms;
+
+                            &:hover {
+                                transform: scale3d(1.1, 1.1, 1.1);
+                            }
                         }
 
                         .title_pilares h2 {
@@ -455,22 +607,22 @@ nav {
 
                 .card_1 {
                     position: absolute;
-                    right: 40px;
+                    right: 60px;
                     top: 60px;
                     z-index: 1;
                 }
 
                 .card_2 {
                     position: absolute;
-                    left: -80px;
-                    top: 20%;
-                    z-index: -1;
+                    left: -50px;
+                    top: 180px;
+                    z-index: 0;
                 }
 
                 .card_3 {
                     position: absolute;
                     right: 20%;
-                    bottom: 20px;
+                    bottom: 0px;
                     z-index: 1;
                 }
             }
@@ -487,6 +639,19 @@ nav {
     gap: 40px;
     border-radius: 40px;
     max-width: 1000px;
+}
+
+
+@keyframes imgs_size {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
 }
 
 .container_desenvolvimento {
@@ -516,7 +681,9 @@ nav {
                 border-radius: 40px;
 
                 svg {
-
+                    animation: imgs_size 1ms ease-in both;
+                    animation-timeline: view();
+                    animation-range: cover 0% cover 40%;
                     max-width: max-content;
                     width: 100%;
                 }
@@ -537,6 +704,8 @@ nav {
                 left: 40px;
                 max-width: max-content;
                 width: 100%;
+                height: auto;
+                z-index: 1;
             }
 
             .area_text_desenvolvimento {
@@ -707,6 +876,12 @@ nav {
                     background: #DBF4FD;
                     width: 60px;
                     height: 60px;
+                    transition: all ease-in-out 100ms;
+                    transform: scale3d(1, 1, 1);
+
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
                 }
 
                 .title_beneficios h2 {
@@ -896,7 +1071,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0px 0px 60px 0px;
+    padding: 0px 0px 0px 0px;
 
     .container_comecar_int {
         display: flex;
@@ -925,7 +1100,7 @@ nav {
                 color: #293437;
                 font-family: $font-regular-400;
                 font-size: $font-info;
-                line-height: 100%;
+                line-height: 140%;
 
                 b {
                     font-family: $font-bold-700;
@@ -948,7 +1123,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0px 0px 60px 0px;
+    padding: 60px 0px 60px 0px;
 
     .container_experiencia_int {
         display: flex;
@@ -996,7 +1171,7 @@ nav {
                     text-align: center;
                     font-family: $font-regular-400;
                     font-size: $font-info;
-                    line-height: 100%;
+                    line-height: 140%;
                     letter-spacing: 0.32px;
                 }
             }
@@ -1024,6 +1199,9 @@ nav {
                         padding: 15px 20px 15px 20px;
 
                         img {
+                            animation: imgs_size 1ms ease-in both;
+                            animation-timeline: view();
+                            animation-range: cover 0% cover 30%;
                             width: 100%;
                             max-width: 460px;
                             height: auto;
@@ -1241,6 +1419,13 @@ nav {
         --font-title-2: 32px;
     }
 
+    .area_whatsapp img {
+        width: 60px;
+        height: 60px;
+    }
+    .area_whatsapp a {
+        height: 60px;
+    }
 
     .menu_mobile {
         display: flex;
@@ -1373,10 +1558,21 @@ nav {
             .area_pilares {
                 gap: 40px;
                 padding: 0px 20px;
+
                 .area_cards_pilares {
                     height: auto;
-                    position: initial;
+                    position: relative;
                     gap: 30px;
+
+                    .js_icon_card {
+                        right: 0px;
+                        top: 20%;
+                    }
+
+                    .html_icon_card {
+                        left: 0px;
+                    }
+
                     .cards_pilares {
                         height: auto;
                     }
@@ -1455,6 +1651,7 @@ nav {
 
     .container_beneficios {
         padding: 40px 0px 40px 0px;
+
         .container_beneficios_int {
             .area_beneficios {
                 padding: 0px 20px;
@@ -1466,6 +1663,7 @@ nav {
 
     .container_solucoes {
         padding: 40px 0px 40px 0px;
+
         .container_solucoes_int {
             .area_solucoes {
                 flex-direction: column;
@@ -1481,19 +1679,21 @@ nav {
     }
 
     .container_comecar {
-        padding: 0px 0px 40px 0px;
+
         .container_comecar_int {
             .area_comecar {
                 padding: 0px 20px;
             }
         }
     }
-  
+
     .container_experiencia {
-        padding: 0px 0px 40px 0px;
+        padding: 40px 0px 40px 0px;
+
         .container_experiencia_int {
             .area_experiencia {
                 padding: 0px 20px;
+
                 .area_visao {
                     .card_visao {
                         .card_visao_int {
@@ -1515,13 +1715,14 @@ nav {
 
     .container_orcamento {
         padding: 40px 0px 40px 0px;
-        .container_orcamento_int  {
+
+        .container_orcamento_int {
             .area_orcamento {
                 padding: 0px 20px;
             }
         }
     }
-  
+
     .container_portfolio {
         padding: 40px 0px 40px 0px;
     }
@@ -1541,6 +1742,7 @@ nav {
                     gap: 20px;
                     align-items: center;
                 }
+
                 .col_sm_2 {
                     align-items: center;
                 }
@@ -1590,7 +1792,7 @@ nav {
             .area_desenvolvimento {
                 width: auto;
                 padding: 0px 20px;
-                
+
                 .perfil {
                     top: -140px;
                 }
@@ -1613,11 +1815,11 @@ nav {
                         }
 
                     }
-                  
+
                 }
             }
 
-            .bg_desempenho  {
+            .bg_desempenho {
                 .area_desenvolvimento_int {
                     gap: 140px;
                 }
