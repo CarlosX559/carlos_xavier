@@ -34,6 +34,7 @@ html {
 
 * {
     font-family: 'Ubuntu-Regular', 'Nunito';
+    box-sizing: border-box;
 }
 
 h1,
@@ -408,7 +409,7 @@ nav {
                     background: #FFF;
                     padding: 20px 25px 20px 30px;
                     max-width: 220px;
-                    height: 270px;
+                    height: auto;
 
                     .cards_pilares_int {
                         display: flex;
@@ -480,12 +481,12 @@ nav {
 
 %card_desenvolvimento {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 40px;
     border-radius: 40px;
-    max-width: 1060px;
+    max-width: 1000px;
 }
 
 .container_desenvolvimento {
@@ -503,16 +504,31 @@ nav {
         width: 100%;
 
         .area_desenvolvimento {
-            border-radius: 40px;
-            background: #DBF6FF;
-            padding: 20px 60px;
+
+            @extend %card_desenvolvimento;
 
             .area_desenvolvimento_int {
-                @extend %card_desenvolvimento;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                padding: 20px 40px;
+                background: #DBF6FF;
+                border-radius: 40px;
+
+                svg {
+
+                    max-width: max-content;
+                    width: 100%;
+                }
             }
 
             .area_perfil {
                 position: relative;
+
+                svg {
+                    max-width: 536px;
+                    width: 100%;
+                }
             }
 
             .perfil {
@@ -552,14 +568,20 @@ nav {
         }
 
         .bg_otimizacao {
-            background: #F1EDFF;
-            padding: 0px 60px;
+
+            .area_desenvolvimento_int {
+                padding: 0px 40px;
+                background: #F1EDFF;
+            }
         }
 
         .bg_desempenho {
-            background: #4923EC;
-            padding: 0px 0px 10px 60px;
-            max-width: 1020px;
+
+            .area_desenvolvimento_int {
+                background: #4923EC;
+                padding: 0px 0px 10px 60px;
+
+            }
 
             .area_text_desenvolvimento {
                 .title_desenvovimento h2 {
@@ -657,7 +679,8 @@ nav {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 40px;
+            row-gap: 20px;
+            column-gap: 40px;
             flex-wrap: wrap;
             max-width: 1000px;
             width: 100%;
@@ -814,7 +837,6 @@ nav {
                 background: #DBF6FF;
                 width: 100%;
                 max-width: 520px;
-                padding: 30px 30px 40px 30px;
                 position: relative;
                 z-index: 1;
 
@@ -834,6 +856,7 @@ nav {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding: 30px 30px 40px 30px;
 
                     .texts_info_solucoes p {
                         color: #294A53;
@@ -991,13 +1014,14 @@ nav {
                     background: #DBF6FF;
                     width: 100%;
                     max-width: max-content;
-                    padding: 15px 20px 15px 20px;
+
 
                     .card_visao_int {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         gap: 20px;
+                        padding: 15px 20px 15px 20px;
 
                         img {
                             width: 100%;
@@ -1073,7 +1097,8 @@ nav {
                 justify-content: center;
                 width: 100%;
                 flex-wrap: wrap;
-                gap: 20px;
+                row-gap: 40px;
+                column-gap: 20px;
 
                 .portfolio_card {
                     display: flex;
@@ -1131,7 +1156,7 @@ nav {
 
         .area_footer {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
             width: 100%;
 
@@ -1175,6 +1200,7 @@ nav {
                     justify-content: space-between;
                     width: 100%;
                     max-width: 120px;
+
                     .circle_footer {
                         display: flex;
                         justify-content: center;
@@ -1195,19 +1221,26 @@ nav {
             border-top: #9BC2CC 0.5px solid;
             width: 100%;
             padding-top: 20px;
+
+            .copt p {
+                color: #294A53;
+                font-family: $font-regular-400;
+                font-size: 16px;
+                line-height: 100%;
+            }
         }
 
     }
 }
 
 
-@media( max-width: 1024px ) {
+@media(max-width: 1024px) {
 
     :root {
         --font-title-1: 36px;
         --font-title-2: 32px;
     }
-    
+
 
     .menu_mobile {
         display: flex;
@@ -1321,10 +1354,12 @@ nav {
     .area_md {
         flex-direction: column;
         padding: 0px 20px;
+
         .area_texts_home {
             align-items: center;
             text-align: center;
             gap: 20px;
+
             .title_home h2 {
                 font-size: 32px;
             }
@@ -1333,27 +1368,278 @@ nav {
 
     .container_pilares {
         padding: 40px 0px 0px 0px;
+
         .container_pilares_int {
             .area_pilares {
                 gap: 40px;
-                .area_cards_pilares  {
+                padding: 0px 20px;
+                .area_cards_pilares {
                     height: auto;
                     position: initial;
                     gap: 30px;
+                    .cards_pilares {
+                        height: auto;
+                    }
+
                     .card_1 {
                         position: initial;
-                        z-index:auto;
+                        z-index: auto;
                     }
+
                     .card_2 {
                         position: initial;
-                        z-index:auto;
+                        z-index: auto;
                     }
+
                     .card_3 {
                         position: initial;
-                        z-index:auto;
+                        z-index: auto;
                     }
                 }
             }
+        }
+    }
+
+
+    .container_desenvolvimento {
+        .container_desenvolvimento_int {
+            gap: 60px;
+
+            .area_desenvolvimento {
+
+                .area_desenvolvimento_int {
+                    flex-direction: column;
+                    padding: 0px;
+                    padding: 0px 0px 20px 0px;
+
+                    .area_text_desenvolvimento {
+                        text-align: left;
+                        align-items: flex-start;
+                        gap: 20px;
+                        padding: 30px 30px 0px 30px;
+                        width: auto;
+
+                        .title_desenvovimento h2 {
+                            font-size: 28px;
+                            line-height: 120%;
+                        }
+                    }
+                }
+
+
+            }
+
+            .bg_otimizacao {
+
+                .area_desenvolvimento_int {
+                    flex-direction: column-reverse;
+                    padding: 0px;
+
+                    svg {
+                        margin-top: 0px !important;
+                    }
+                }
+            }
+
+            .bg_desempenho {
+
+                .area_desenvolvimento_int {
+                    gap: 80px;
+                    padding: 0px 0px 10px 0px;
+                }
+            }
+
+        }
+    }
+
+
+    .container_beneficios {
+        padding: 40px 0px 40px 0px;
+        .container_beneficios_int {
+            .area_beneficios {
+                padding: 0px 20px;
+                width: auto;
+            }
+        }
+    }
+
+
+    .container_solucoes {
+        padding: 40px 0px 40px 0px;
+        .container_solucoes_int {
+            .area_solucoes {
+                flex-direction: column;
+                align-items: center;
+                padding: 0px 20px;
+            }
+
+            .area_infos_icons {
+                padding: 0px 20px;
+                width: auto;
+            }
+        }
+    }
+
+    .container_comecar {
+        padding: 0px 0px 40px 0px;
+        .container_comecar_int {
+            .area_comecar {
+                padding: 0px 20px;
+            }
+        }
+    }
+  
+    .container_experiencia {
+        padding: 0px 0px 40px 0px;
+        .container_experiencia_int {
+            .area_experiencia {
+                padding: 0px 20px;
+                .area_visao {
+                    .card_visao {
+                        .card_visao_int {
+                            flex-direction: column;
+                        }
+
+                        .site_responsivo {
+                            flex-direction: column-reverse;
+                        }
+
+                        .seo {
+                            flex-direction: column-reverse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container_orcamento {
+        padding: 40px 0px 40px 0px;
+        .container_orcamento_int  {
+            .area_orcamento {
+                padding: 0px 20px;
+            }
+        }
+    }
+  
+    .container_portfolio {
+        padding: 40px 0px 40px 0px;
+    }
+
+
+    .container_footer {
+        .container_footer_int {
+            .area_footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+                max-width: 280px;
+                padding: 0px 20px;
+
+                .col_sm_1 {
+                    gap: 20px;
+                    align-items: center;
+                }
+                .col_sm_2 {
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .container_portfolio {
+        .container_portfolio_int {
+            .area_portfolio {
+                .area_portfolio_notebooks {
+                    .portfolio_card img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .container_footer {
+        .container_footer_int {
+            .area_copy {
+                justify-content: center;
+
+                .copy p {
+                    padding: 0px 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media(max-width: 480px) {
+
+    :root {
+        --font-title-1: 32px;
+        --font-title-2: 28px;
+    }
+
+
+    .container_desenvolvimento {
+        .container_desenvolvimento_int {
+
+            .area_desenvolvimento {
+                width: auto;
+                padding: 0px 20px;
+                
+                .perfil {
+                    top: -140px;
+                }
+
+                .area_desenvolvimento_int {
+                    .area_perfil {
+                        svg {
+                            max-width: max-content;
+                        }
+                    }
+
+                    svg {
+                        max-width: 340px;
+                        height: 310px;
+                    }
+
+                    .area_text_desenvolvimento {
+                        .title_desenvovimento h2 {
+                            font-size: 26px;
+                        }
+
+                    }
+                  
+                }
+            }
+
+            .bg_desempenho  {
+                .area_desenvolvimento_int {
+                    gap: 140px;
+                }
+            }
+
+        }
+    }
+
+    .container_beneficios {
+        .container_beneficios_int {
+            .area_texts_beneficios {
+                padding: 0px 20px;
+                width: auto;
+            }
+        }
+    }
+
+
+
+    .container_solucoes {
+        .box_beneficios_2 {
+            display: none;
         }
     }
 
